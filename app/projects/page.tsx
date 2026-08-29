@@ -1,4 +1,10 @@
 import { ProjectCardGrid } from '@/app/ui/cards';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Projects',
+  description: 'Personal projects page',
+};
 
 const projects = [
   {

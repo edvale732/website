@@ -15,9 +15,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_APP_URL ?? 'https://edwardvale.co.uk';
+
 export const metadata: Metadata = {
-  title: "Edward Vale",
-  description: "Portfolio website",
+  title: {
+    default: 'Edward Vale',
+    template: '%s | Edward Vale',
+  },
+  description: 'Portfolio website of Edward Vale',
+  metadataBase: new URL(siteUrl),
 };
 
 export default function RootLayout({
