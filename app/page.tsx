@@ -15,7 +15,7 @@ export default function Page() {
               Edward Vale
             </h1>
             <p className="max-w-xl text-base leading-7 text-violet-100/85">
-              Building thoughtful digital experiences with clarity, craft, and performance.
+              First-Class Computer Science graduate from Lancaster University, looking to begin a career in tech.
             </p>
           </div>
         </div>
