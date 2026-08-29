@@ -8,9 +8,6 @@ export default function Page() {
       <main className="flex w-full flex-1 justify-center px-4 py-16 sm:px-6 lg:px-8">
         <div className="w-full max-w-5xl rounded-xl border border-violet-400/30 bg-[#160f24] p-8 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] sm:p-12">
           <div className="flex flex-col items-start gap-6 text-left">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-violet-300">
-              Portfolio
-            </p>
             <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-white">
               Edward Vale
             </h1>
