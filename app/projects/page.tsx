@@ -10,7 +10,7 @@ const projects = [
   {
     title: 'Portfolio Website',
     description:
-      'A polished personal portfolio built to showcase my projects in a clean, modern layout.',
+      'A polished personal portfolio built to showcase myself and my projects in a clean, modern layout.',
     tags: ['Next.js', 'TypeScript', 'Design'],
     status: 'In Progress',
     year: '2026',
@@ -33,6 +33,15 @@ const projects = [
     status: 'Dissertation',
     year: '2025',
     href: 'https://youtu.be/4f6bMZY8u7g',
+  },
+  {
+    title: 'Next.js Dashboard Website',
+    description:
+      'A full-stack web dashboard built with Next.js and TypeScript, as part of a Next.js course. ',
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
+    status: 'Completed',
+    year: '2026',
+    href: 'https://github.com/edvale732/nextjs-dashboard',
   },
 ];
 
