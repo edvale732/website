@@ -16,12 +16,12 @@ export default function Page() {
                   Edward Vale
                 </p>
                 <h1 className="max-w-xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  Building software to solve problems and create value
+                  Building software to solve problems
                 </h1>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-violet-100/85 sm:text-lg">
-                Hi, I'm Ed, a First-Class Computer Science graduate from Lancaster University with a passion for solving problems through software. I have developed my skills through university, <a href="https://www.mytutor.co.uk/tutors/10005073/" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">online tutoring</a> and <Link href="/projects" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">personal projects</Link>, and I am now seeking opportunities to apply my knowledge and contribute to innovative software development.
+                Hi, I'm Edward, a First-Class Computer Science graduate from Lancaster University who enjoys turning complex problems into practical software. I have developed my skills through university, <Link href="/projects" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">personal projects</Link> and <a href="https://www.mytutor.co.uk/tutors/10005073/" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">online tutoring</a>, and I am now seeking opportunities to apply my knowledge, expand my skills and contribute to a team.
               </p>
 
               <div className="grid gap-4 rounded-2xl border border-violet-400/20 bg-violet-500/5 p-4 text-sm text-violet-100/85 sm:grid-cols-3">
