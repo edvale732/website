@@ -3,10 +3,12 @@ import Link from 'next/link';
 import NavLinks from '@/app/ui/nav-links';
 import GitHubIcon from '@/app/ui/icons/github-white.png';
 import LinkedInIcon from '@/app/ui/icons/linkedin-white.png';
+import EmailIcon from '@/app/ui/icons/email.png';
 
 const socialLinks = [
   { name: 'GitHub', href: 'https://github.com/edvale732', icon: GitHubIcon, alt: 'GitHub logo' },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/edward-vale-4672b3372', icon: LinkedInIcon, alt: 'LinkedIn logo' },
+  { name: 'Email', href: 'mailto:hello@edwardvale.co.uk', icon: EmailIcon, alt: 'Email logo'},
 ];
 
 export default function NavBar() {
