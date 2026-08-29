@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import headshot from "@/app/ui/icons/Headshot.jpg";
 import "./globals.css";
 import NavBar from "./ui/navbar";
  
@@ -25,6 +26,11 @@ export const metadata: Metadata = {
   },
   description: 'Portfolio website of Edward Vale',
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [{ url: headshot.src, rel: 'icon' }],
+    shortcut: [{ url: headshot.src, rel: 'shortcut icon' }],
+    apple: [{ url: headshot.src, rel: 'apple-touch-icon' }],
+  },
 };
 
 export default function RootLayout({
