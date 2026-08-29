@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import headshot from '@/app/ui/icons/Headshot.jpg';
+import GitHubIcon from '@/app/ui/icons/github-white.png';
+import LinkedInIcon from '@/app/ui/icons/linkedin-white.png';
 
 export default function Page() {
   return (
@@ -22,19 +24,51 @@ export default function Page() {
                 Hi, I'm Ed, a First-Class Computer Science graduate from Lancaster University with a passion for solving problems through software. I have developed my skills through university, <a href="https://www.mytutor.co.uk/tutors/10005073/" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">online tutoring</a> and <Link href="/projects" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">personal projects</Link>, and I am now seeking opportunities to apply my knowledge and contribute to innovative software development.
               </p>
 
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                <a
-                  href="mailto:hello@edwardvale.co.uk"
-                  className="inline-flex items-center justify-center rounded-full bg-violet-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-400"
-                >
-                  hello@edwardvale.co.uk
-                </a>
-                <Link
-                  href="/projects"
-                  className="inline-flex items-center justify-center rounded-full border border-violet-300/30 bg-white/0 px-5 py-3 text-sm font-semibold text-violet-100 transition hover:border-violet-200/60 hover:bg-violet-400/10"
-                >
-                  View projects
-                </Link>
+              <div className="grid gap-4 rounded-2xl border border-violet-400/20 bg-violet-500/5 p-4 text-sm text-violet-100/85 sm:grid-cols-3">
+                <div>
+                  <p className="mb-1 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-violet-300/70">
+                    Based in
+                  </p>
+                  <p className="font-medium text-violet-200">England</p>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-violet-300/70">
+                    Email
+                  </p>
+                  <a
+                    href="mailto:hello@edwardvale.co.uk"
+                    className="font-medium text-violet-200 transition hover:text-violet-100"
+                  >
+                    hello@edwardvale.co.uk
+                  </a>
+                </div>
+
+                <div>
+                  <p className="mb-1 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-violet-300/70">
+                    Links
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href="https://github.com/edvale732"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="GitHub"
+                      className="flex h-8 w-8 items-center justify-center rounded-md border border-violet-300/20 bg-violet-500/5 transition hover:border-violet-200/60 hover:bg-violet-500/10"
+                    >
+                      <Image src={GitHubIcon} alt="GitHub logo" width={18} height={18} className="h-[18px] w-[18px]" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/edward-vale-4672b3372"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="LinkedIn"
+                      className="flex h-8 w-8 items-center justify-center rounded-md border border-violet-300/20 bg-violet-500/5 transition hover:border-violet-200/60 hover:bg-violet-500/10"
+                    >
+                      <Image src={LinkedInIcon} alt="LinkedIn logo" width={18} height={18} className="h-[18px] w-[18px]" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </section>
 
