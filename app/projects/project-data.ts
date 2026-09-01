@@ -15,17 +15,6 @@ export const projects = [
     image: PortfolioImage,
   },
   {
-    title: 'Rowing Tracker App',
-    description:
-      'A mobile app designed to track and analyse rowing, strength training and flexibility metrics, providing insights for athletes and coaches.',
-    tags: ['Java', 'Python', 'PostgreSQL'],
-    status: 'Idea',
-    year: '2026',
-    href: 'https://github.com/edvale732/rowing_gym',
-    image:
-      UnderConstructionImage,
-  },
-  {
     title: 'Campus Navigation Game',
     description:
       'An open-world videogame set on Lancaster University campus, designed to help students learn the campus layout.',
