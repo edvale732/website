@@ -1,0 +1,50 @@
+import DashboardWebsiteImage from '@/app/ui/icons/dashboard.png';
+import CNGImage from '@/app/ui/icons/cng.png';
+import PortfolioImage from '@/app/ui/icons/portfolio-website.png';
+
+export const projects = [
+  {
+    title: 'Portfolio Website',
+    description:
+      'A polished personal portfolio built to showcase myself and my projects in a clean, modern layout.',
+    tags: ['Next.js', 'TypeScript', 'Design'],
+    status: 'In Progress',
+    year: '2026',
+    href: 'https://github.com/edvale732/website',
+    image:
+      PortfolioImage.src,
+  },
+  {
+    title: 'Rowing Tracker App',
+    description:
+      'A mobile app designed to track and analyse rowing, strength training and flexibility metrics, providing insights for athletes and coaches.',
+    tags: ['Java', 'Python', 'PostgreSQL'],
+    status: 'Prototype',
+    year: '2026',
+    href: 'https://github.com/edvale732/rowing_gym',
+    image:
+      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    title: 'Campus Navigation Game',
+    description:
+      'An open-world videogame set on Lancaster University campus, designed to help students learn the campus layout.',
+    tags: ['Godot', 'Research', 'Videogame'],
+    status: 'Dissertation',
+    year: '2025',
+    href: 'https://youtu.be/4f6bMZY8u7g',
+    image:
+      CNGImage.src,
+  },
+  {
+    title: 'Next.js Dashboard Website',
+    description:
+      'A full-stack web dashboard built with Next.js and TypeScript, as part of a Next.js course. ',
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
+    status: 'Completed',
+    year: '2026',
+    href: 'https://github.com/edvale732/nextjs-dashboard',
+    image:
+      DashboardWebsiteImage.src,
+  },
+];
