@@ -11,8 +11,7 @@ export const projects = [
     status: 'In Progress',
     year: '2026',
     href: 'https://github.com/edvale732/website',
-    image:
-      PortfolioImage.src,
+    image: PortfolioImage,
   },
   {
     title: 'Rowing Tracker App',
@@ -33,8 +32,7 @@ export const projects = [
     status: 'Dissertation',
     year: '2025',
     href: 'https://youtu.be/4f6bMZY8u7g',
-    image:
-      CNGImage.src,
+    image: CNGImage,
   },
   {
     title: 'Next.js Dashboard Website',
@@ -44,7 +42,6 @@ export const projects = [
     status: 'Completed',
     year: '2026',
     href: 'https://github.com/edvale732/nextjs-dashboard',
-    image:
-      DashboardWebsiteImage.src,
+    image: DashboardWebsiteImage,
   },
 ];

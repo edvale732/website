@@ -7,21 +7,18 @@ import LinkedInIcon from '@/app/ui/icons/linkedin-white.png';
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col bg-[#0b0713] font-sans text-violet-50">
-      <main className="flex w-full flex-1 justify-center px-4 py-16 sm:px-6 lg:px-8">
-        <div className="w-full max-w-7xl rounded-2xl border border-violet-400/30 bg-[#160f24]/90 p-8 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] backdrop-blur-sm sm:p-10 lg:p-12">
-          <div className="grid gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
+      <main className="flex w-full flex-1 items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
+        <div className="flex w-full max-w-7xl items-center rounded-2xl border border-violet-400/30 bg-[#160f24]/90 p-8 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] backdrop-blur-sm sm:p-10 lg:min-h-[640px] lg:p-12">
+          <div className="grid w-full gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
             <section className="flex flex-col gap-7 text-left">
               <div className="space-y-4">
-                <p className="text-sm font-medium uppercase tracking-[0.28em] text-violet-300/80">
+                <h1 className="max-w-xl text-8xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                   Edward Vale
-                </p>
-                <h1 className="max-w-xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  Building software to solve problems
                 </h1>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-violet-100/85 sm:text-lg">
-                Hi, I'm Edward, a First-Class Computer Science graduate from Lancaster University who enjoys turning complex problems into practical software. I have developed my skills through university, <Link href="/projects" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">personal projects</Link> and <a href="https://www.mytutor.co.uk/tutors/10005073/" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">online tutoring</a>, and I am now seeking opportunities to apply my knowledge, expand my skills and contribute to a team.
+                Hi, I am Edward, a First-Class Computer Science graduate from Lancaster University who enjoys turning complex problems into practical software. I have developed my skills through university, <Link href="/projects" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">personal projects</Link> and <a href="https://www.mytutor.co.uk/tutors/10005073/" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">online tutoring</a>, and I am now seeking opportunities to apply my knowledge, expand my skills and contribute to a team.
               </p>
 
               <div className="grid gap-4 rounded-2xl border border-violet-400/20 bg-violet-500/5 p-4 text-sm text-violet-100/85 sm:grid-cols-3">

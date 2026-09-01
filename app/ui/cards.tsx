@@ -1,3 +1,4 @@
+import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 export type ProjectCardProps = {
@@ -7,7 +8,7 @@ export type ProjectCardProps = {
   status?: string;
   year?: string;
   href?: string;
-  image?: string;
+  image?: string | StaticImageData;
   ctaLabel?: string;
 };
 
@@ -25,9 +26,11 @@ export function ProjectCard({
     <>
       {image ? (
         <div className="mb-5 overflow-hidden rounded-2xl border border-violet-400/20 bg-violet-950/40">
-          <img
+          <Image
             src={image}
             alt={`${title} preview`}
+            width={1200}
+            height={680}
             className="h-60 w-full object-cover transition duration-300 group-hover:scale-105"
           />
         </div>

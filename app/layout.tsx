@@ -21,7 +21,7 @@ const siteUrl =
 
 export const metadata: Metadata = {
   title: {
-    default: 'Edward Vale',
+    default: 'Home | Edward Vale',
     template: '%s | Edward Vale',
   },
   description: 'Portfolio website of Edward Vale',
