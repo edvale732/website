@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <div className="flex min-h-screen flex-col bg-[#0b0713] font-sans text-violet-50">
       <main className="flex w-full flex-1 justify-center px-4 py-16 sm:px-6 lg:px-8">
-        <div className="w-full max-w-6xl rounded-2xl border border-violet-400/30 bg-[#160f24]/90 p-8 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] backdrop-blur-sm sm:p-10 lg:p-12">
+        <div className="w-full max-w-7xl rounded-2xl border border-violet-400/30 bg-[#160f24]/90 p-8 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] backdrop-blur-sm sm:p-10 lg:p-12">
           <div className="grid gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
             <section className="flex flex-col gap-7 text-left">
               <div className="space-y-4">
