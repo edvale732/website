@@ -7,12 +7,12 @@ import LinkedInIcon from '@/app/ui/icons/linkedin-white.png';
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col bg-[#0b0713] font-sans text-violet-50">
-      <main className="flex w-full flex-1 items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex w-full max-w-7xl items-center rounded-2xl border border-violet-400/30 bg-[#160f24]/90 p-8 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] backdrop-blur-sm sm:p-10 lg:min-h-[640px] lg:p-12">
+      <main className="flex w-full flex-1 items-center justify-center px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
+        <div className="flex w-full max-w-7xl flex-col items-stretch rounded-2xl border border-violet-400/30 bg-[#160f24]/90 p-5 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] backdrop-blur-sm sm:p-10 lg:min-h-[640px] lg:p-12">
           <div className="grid w-full gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
-            <section className="flex flex-col gap-7 text-left">
+            <section className="flex flex-col gap-7 text-center sm:text-left">
               <div className="space-y-4">
-                <h1 className="max-w-xl text-8xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+                <h1 className="max-w-xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                   Edward Vale
                 </h1>
               </div>
@@ -21,7 +21,7 @@ export default function Page() {
                 Hi, I am Edward, a First-Class Computer Science graduate from Lancaster University who enjoys turning complex problems into practical software. I have developed my skills through university, <Link href="/projects" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">personal projects</Link> and <a href="https://www.mytutor.co.uk/tutors/10005073/" className="font-medium text-violet-300 underline decoration-violet-400/70 underline-offset-4 transition hover:text-violet-200">online tutoring</a>, and I am now seeking opportunities to apply my knowledge, expand my skills and contribute to a team.
               </p>
 
-              <div className="grid gap-4 rounded-2xl border border-violet-400/20 bg-violet-500/5 p-4 text-sm text-violet-100/85 sm:grid-cols-3">
+              <div className="grid gap-4 rounded-2xl border border-violet-400/20 bg-violet-500/5 p-4 text-center text-sm text-violet-100/85 sm:grid-cols-3 sm:text-left">
                 <div>
                   <p className="mb-1 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-violet-300/70">
                     Based in
@@ -35,7 +35,7 @@ export default function Page() {
                   </p>
                   <a
                     href="mailto:hello@edwardvale.co.uk"
-                    className="font-medium text-violet-200 transition hover:text-violet-100"
+                    className="break-words font-medium text-violet-200 transition hover:text-violet-100"
                   >
                     hello@edwardvale.co.uk
                   </a>
@@ -45,7 +45,7 @@ export default function Page() {
                   <p className="mb-1 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-violet-300/70">
                     Links
                   </p>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center gap-3 sm:justify-start">
                     <a
                       href="https://github.com/edvale732"
                       target="_blank"
@@ -82,6 +82,15 @@ export default function Page() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-2 flex justify-center sm:justify-start">
+            <Link
+              href="/projects"
+              className="rounded-md border border-violet-300/40 bg-violet-500/15 px-5 py-3 text-sm font-semibold text-violet-50 transition hover:border-violet-200/70 hover:bg-violet-500/25 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 focus:ring-offset-[#160f24]"
+            >
+              View projects
+            </Link>
           </div>
         </div>
       </main>
