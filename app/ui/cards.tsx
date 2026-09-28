@@ -1,5 +1,6 @@
 import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
+import RevealOnScroll from '@/app/ui/reveal-on-scroll';
 
 export type ProjectCardProps = {
   title: string;
@@ -93,8 +94,10 @@ export function ProjectCard({
 export function ProjectCardGrid({ projects }: { projects: ProjectCardProps[] }) {
   return (
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
-      {projects.map((project) => (
-        <ProjectCard key={project.title} {...project} />
+      {projects.map((project, index) => (
+        <RevealOnScroll key={project.title} delay={index * 100} className="h-full">
+          <ProjectCard {...project} />
+        </RevealOnScroll>
       ))}
     </div>
   );
