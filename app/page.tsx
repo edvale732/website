@@ -3,6 +3,7 @@ import Link from 'next/link';
 import headshot from '@/app/ui/icons/Headshot.jpg';
 import GitHubIcon from '@/app/ui/icons/github-white.png';
 import LinkedInIcon from '@/app/ui/icons/linkedin-white.png';
+import RevealOnScroll from '@/app/ui/reveal-on-scroll';
 
 export default function Page() {
   return (
@@ -10,7 +11,7 @@ export default function Page() {
       <main className="flex w-full flex-1 items-center justify-center px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
         <div className="flex w-full max-w-7xl flex-col items-stretch rounded-2xl border border-violet-400/30 bg-[#160f24]/90 p-5 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] backdrop-blur-sm sm:p-10 lg:min-h-[640px] lg:p-12">
           <div className="grid w-full gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
-            <section className="flex flex-col gap-7 text-center sm:text-left">
+            <RevealOnScroll as="section" className="flex flex-col gap-7 text-center sm:text-left">
               <div className="space-y-4">
                 <h1 className="max-w-xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                   Edward Vale
@@ -67,9 +68,9 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </section>
+            </RevealOnScroll>
 
-            <div className="relative hidden justify-center lg:flex">
+            <RevealOnScroll delay={150} className="relative hidden justify-center lg:flex">
               <div className="absolute inset-4 -z-10 rounded-[1.5rem] bg-violet-500/10 blur-2xl" />
               <div className="w-full max-w-[360px] overflow-hidden rounded-[1.5rem] border border-violet-300/20 bg-[#120d1d] p-2 shadow-[0_12px_30px_rgba(76,29,149,0.22)]">
                 <div className="overflow-hidden rounded-[1.1rem]">
@@ -81,17 +82,17 @@ export default function Page() {
                   />
                 </div>
               </div>
-            </div>
+            </RevealOnScroll>
           </div>
 
-          <div className="mt-2 flex justify-center sm:justify-start">
+          <RevealOnScroll delay={250} className="mt-2 flex justify-center sm:justify-start">
             <Link
               href="/projects"
               className="rounded-md border border-violet-300/40 bg-violet-500/15 px-5 py-3 text-sm font-semibold text-violet-50 transition hover:border-violet-200/70 hover:bg-violet-500/25 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 focus:ring-offset-[#160f24]"
             >
               View projects
             </Link>
-          </div>
+          </RevealOnScroll>
         </div>
       </main>
     </div>
