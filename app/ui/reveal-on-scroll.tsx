@@ -7,7 +7,7 @@ type RevealOnScrollProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
-  as?: "div" | "li";
+  as?: "div" | "li" | "section";
 };
 
 export default function RevealOnScroll({
@@ -41,7 +41,7 @@ export default function RevealOnScroll({
   }, []);
 
   const Component = as;
-  const setElementRef = (element: HTMLDivElement | HTMLLIElement | null) => {
+  const setElementRef = (element: HTMLElement | null) => {
     elementRef.current = element;
   };
 
