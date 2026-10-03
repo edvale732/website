@@ -22,6 +22,7 @@ export const projectType = {
 export const projects = [
   {
     slug: 'erg-master',
+    featured: true,
     title: 'Erg Master',
     projectType: projectType.personal,
     description:
@@ -35,6 +36,7 @@ export const projects = [
   
   {
     slug: 'campus-navigation-game',
+    featured: true,
     title: 'Campus Navigation Game',
     projectType: projectType.university,
     description:
@@ -47,6 +49,7 @@ export const projects = [
   },
   {
     slug: 'portfolio-website',
+    featured: false,
     projectType: projectType.personal,
     title: 'Portfolio Website',
     description:
@@ -59,6 +62,7 @@ export const projects = [
   },
   {
     slug: 'film-portfolio-website',
+    featured: true,
     projectType: projectType.client,
     title: 'Film Portfolio Website',
     description:
@@ -71,6 +75,7 @@ export const projects = [
   },
   {
     slug: 'nextjs-dashboard-website',
+    featured: false,
     projectType: projectType.personal,
     title: 'Next.js Dashboard Website',
     description:
