@@ -3,6 +3,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { projects } from '@/app/projects/project-data';
+import ProjectReadme from '@/app/ui/project-readme';
+import GitHubIcon from '@/app/ui/icons/github-white.png';
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -68,35 +70,62 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <span className="inline-flex items-center rounded-full border border-violet-400/50 bg-violet-500/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-violet-200">
                 {project.status}
               </span>
-              <span className="text-sm font-medium uppercase tracking-[0.14em] text-violet-300/80">
-                {project.year}
-              </span>
+              <div className="ml-auto flex items-center gap-3">
+                <span className="text-sm font-medium uppercase tracking-[0.14em] text-violet-300/80">
+                  {project.year}
+                </span>
+                {project.href?.startsWith('https://github.com/') ? (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${project.title} on GitHub`}
+                    className="rounded-full p-1 transition hover:bg-violet-400/10 focus:outline-none focus:ring-2 focus:ring-violet-400"
+                  >
+                    <Image
+                      src={GitHubIcon}
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="h-[30px] w-[30px]"
+                    />
+                  </a>
+                ) : null}
+              </div>
             </div>
 
-            <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              {project.title}
-            </h1>
+            {!project.readmeUrl ? (
+              <>
+                <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                  {project.title}
+                </h1>
 
-            <section className="mt-8">
-              <h2 className="text-lg font-semibold text-white">Overview</h2>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-violet-100/80">
-                {project.description}
-              </p>
-            </section>
+                <section className="mt-8">
+                  <h2 className="text-lg font-semibold text-white">Overview</h2>
+                  <p className="mt-3 max-w-3xl text-base leading-7 text-violet-100/80">
+                    {project.description}
+                  </p>
+                </section>
 
-            <section className="mt-8">
-              <h2 className="text-lg font-semibold text-white">Built with</h2>
-              <ul className="mt-3 flex flex-wrap gap-2" aria-label="Technologies">
-                {project.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="rounded-full border border-violet-400/20 bg-violet-400/5 px-3 py-1.5 text-sm font-medium text-violet-100/90"
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul>
-            </section>
+                <section className="mt-8">
+                  <h2 className="text-lg font-semibold text-white">Built with</h2>
+                  <ul className="mt-3 flex flex-wrap gap-2" aria-label="Technologies">
+                    {project.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="rounded-full border border-violet-400/20 bg-violet-400/5 px-3 py-1.5 text-sm font-medium text-violet-100/90"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              </>
+            ) : null}
+
+            {project.readmeUrl ? (
+              <ProjectReadme readmeUrl={project.readmeUrl} />
+            ) : null}
 
             {project.href ? (
               <a
