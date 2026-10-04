@@ -5,6 +5,16 @@ type ProjectReadmeProps = {
   readmeUrl?: string;
 };
 
+function resolveImageSrc(src: string | undefined, readmeUrl: string) {
+  if (!src) {
+    return undefined;
+  }
+
+  const relativeSrc =
+    src.startsWith('/') && !src.startsWith('//') ? src.slice(1) : src;
+  return new URL(relativeSrc, readmeUrl).href;
+}
+
 export default async function ProjectReadme({
   readmeUrl,
 }: ProjectReadmeProps) {
@@ -18,7 +28,7 @@ export default async function ProjectReadme({
     );
   }
 
-  const response = await fetch(readmeUrl, { cache: 'force-cache' });
+  const response = await fetch(readmeUrl, { cache: 'no-store' });
   if (!response.ok) {
     throw new Error(
       `Failed to load project README (${response.status}) from ${readmeUrl}`,
@@ -42,6 +52,22 @@ export default async function ProjectReadme({
               >
                 {children}
               </a>
+            ),
+            img: ({ src, alt, title }) => (
+              // README images have arbitrary sources and intrinsic dimensions.
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={
+                  typeof src === 'string'
+                    ? resolveImageSrc(src, readmeUrl)
+                    : undefined
+                }
+                alt={alt ?? ''}
+                title={title}
+                loading="lazy"
+                decoding="async"
+                className="my-4 h-auto max-w-full rounded-xl"
+              />
             ),
           }}
         >
