@@ -81,9 +81,34 @@ body {
     hero-title-caret 750ms step-end 150ms infinite;
 }
 
+.projects-title {
+  width: 8ch;
+}
+
+.projects-title__text {
+  display: block;
+  width: 0;
+  overflow: hidden;
+  border-right: 0.08em solid transparent;
+  white-space: nowrap;
+}
+
+.reveal-on-scroll.is-visible .projects-title__text {
+  border-right-color: var(--accent);
+  animation:
+    projects-title-type 1s steps(8, end) 150ms forwards,
+    hero-title-caret 750ms step-end 150ms infinite;
+}
+
 @keyframes hero-title-type {
   to {
     width: 11ch;
+  }
+}
+
+@keyframes projects-title-type {
+  to {
+    width: 8ch;
   }
 }
 
@@ -103,6 +128,12 @@ body {
 
   .hero-title__text {
     width: 11ch;
+    border-right: 0;
+    animation: none;
+  }
+
+  .projects-title__text {
+    width: 8ch;
     border-right: 0;
     animation: none;
   }
