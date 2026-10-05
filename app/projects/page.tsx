@@ -1,7 +1,7 @@
-import { ProjectCardGrid } from '@/app/ui/cards';
 import { Metadata } from 'next';
 import { projects } from '@/app/projects/project-data';
 import RevealOnScroll from '@/app/ui/reveal-on-scroll';
+import { ProjectBrowser } from '@/app/ui/project-browser';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -20,7 +20,7 @@ export default function Page() {
             </h1>
           </RevealOnScroll>
 
-          <ProjectCardGrid projects={projects} />
+          <ProjectBrowser projects={projects} />
         </div>
       </main>
     </div>

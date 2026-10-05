@@ -3,7 +3,13 @@ import Link from 'next/link';
 import RevealOnScroll from '@/app/ui/reveal-on-scroll';
 
 export type ProjectCardProps = {
+  slug: string;
+  featured?: boolean;
   title: string;
+  projectType: {
+    label: string;
+    description: string;
+  };
   description: string;
   tags: string[];
   status?: string;
@@ -14,6 +20,7 @@ export type ProjectCardProps = {
 };
 
 export function ProjectCard({
+  slug,
   title,
   description,
   tags,
@@ -32,7 +39,7 @@ export function ProjectCard({
             alt={`${title} preview`}
             width={1200}
             height={680}
-            className="h-60 w-full rounded-xl object-contain transition duration-300 group-hover:scale-[1.02] md:object-cover"
+            className="h-60 w-full rounded-xl object-contain transition duration-300 group-hover:scale-[1.02]"
           />
         </div>
       ) : null}
@@ -72,16 +79,10 @@ export function ProjectCard({
     </>
   );
 
-  if (!href) {
-    return <article className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-violet-400/30 bg-[#160f24] p-5 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] transition duration-200 hover:-translate-y-1 hover:border-violet-300/60 hover:bg-[#1a122d]">{cardContent}</article>;
-  }
-
   return (
     <Link
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={`Open ${title} on GitHub`}
+      href={`/projects/${slug}`}
+      aria-label={`View ${title} project`}
       className="group block h-full rounded-[28px] focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 focus:ring-offset-[#0b0713]"
     >
       <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-violet-400/30 bg-[#160f24] p-5 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] transition duration-200 hover:-translate-y-1 hover:border-violet-300/60 hover:bg-[#1a122d]">
