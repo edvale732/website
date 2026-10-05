@@ -80,7 +80,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`View ${project.title} on GitHub`}
-                    className="rounded-full p-1 transition hover:bg-violet-400/10 focus:outline-none focus:ring-2 focus:ring-violet-400"
+                    className="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-400/5 px-3 py-2 text-sm font-medium text-violet-100 transition hover:border-violet-300/60 hover:bg-violet-400/10 focus:outline-none focus:ring-2 focus:ring-violet-400"
                   >
                     <Image
                       src={GitHubIcon}
@@ -89,6 +89,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       height={30}
                       className="h-[30px] w-[30px]"
                     />
+                    <span>View GitHub</span>
                   </a>
                 ) : null}
               </div>
