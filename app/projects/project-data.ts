@@ -3,6 +3,11 @@ import CNGImage from '@/app/ui/icons/cng.png';
 import PortfolioImage from '@/app/ui/icons/portfolio-website.png';
 import UnderConstructionImage from '@/app/ui/icons/under-construction.png';
 import ErgMasterImage from '@/app/ui/icons/ergmaster.png';
+import StrokeAIImage from '@/app/ui/icons/stroke-ai.png';
+import CharlotteBeattieImage from '@/app/ui/icons/charlotte-beattie.png';
+import PollyannaHarrisonImage from '@/app/ui/icons/p-harrison.png';
+import TaskTimerImage from '@/app/ui/icons/task-timer.png';
+import type { StaticImageData } from 'next/image';
 
 export const projectType = {
   personal: {
@@ -19,7 +24,21 @@ export const projectType = {
   },
 } as const;
 
-export const projects = [
+export type ProjectData = {
+  slug: string;
+  featured: boolean;
+  title: string;
+  projectType: (typeof projectType)[keyof typeof projectType];
+  description: string;
+  tags: string[];
+  status: string;
+  year: string;
+  href?: string;
+  readmeUrl?: string;
+  image?: StaticImageData;
+};
+
+export const projects: ProjectData[] = [
   {
     slug: 'erg-master',
     featured: true,
@@ -27,11 +46,61 @@ export const projects = [
     projectType: projectType.personal,
     description:
       'A rowing and strength training tracking application, with machine learning performance predictions.',
+
     tags: ['Next.js', 'TypeScript', 'Python'],
     status: 'In Development',
     year: '2026',
     href: 'https://github.com/edvale732/erg-master',
-    image: ErgMasterImage,  
+    readmeUrl:
+      'https://raw.githubusercontent.com/edvale732/erg-master/main/README.md',
+    image: ErgMasterImage,
+  },
+
+  {
+    slug: 'stroke-ai',
+    featured: true,
+    title: 'Stroke AI',
+    projectType: projectType.personal,
+    description:
+      'A Computer Vision application designed to analyse rowing technique.',
+    tags: ['Python', 'Machine Learning', 'CV'],
+    status: 'In Development',
+    year: '2026',
+    href: 'https://github.com/edvale732/stroke-ai',
+    readmeUrl:
+      'https://raw.githubusercontent.com/edvale732/stroke-ai/main/README.md',
+    image: StrokeAIImage,
+
+  },
+
+  {
+    slug: 'task-timer',
+    featured: false,
+    projectType: projectType.personal,
+    title: 'Task Timer',
+    description:
+      'A simple task timer application to help manage and track time spent on various tasks.',
+    tags: ['Next.js', 'TypeScript', 'React'],
+    status: 'In Development',
+    year: '2026',
+    href: 'https://github.com/edvale732/task-timer',
+    readmeUrl:
+      'https://raw.githubusercontent.com/edvale732/task-timer/main/README.md',
+    image: TaskTimerImage,
+  },
+
+  {
+    slug: 'charlotte-beattie',
+    featured: true,
+    projectType: projectType.client,
+    title: 'Media Portfolio Website',
+    description:
+      'A project built for media, business and marketing professional Charlotte Beattie, showcasing her work and portfolio. Sanity CMS was used to allow the client to easily manage and update content.',
+    tags: ['Next.js', 'TypeScript', 'Sanity CMS'],
+    status: 'In Development',
+    year: '2026',
+    href: 'https://charlottebeattie.co.uk',
+    image: CharlotteBeattieImage,
   },
   
   {
@@ -45,6 +114,8 @@ export const projects = [
     status: 'Dissertation',
     year: '2025',
     href: 'https://youtu.be/4f6bMZY8u7g',
+    readmeUrl:
+      'https://raw.githubusercontent.com/edvale732/campus_navigation_game/main/README.md',
     image: CNGImage,
   },
   {
@@ -58,11 +129,13 @@ export const projects = [
     status: 'In Development',
     year: '2026',
     href: 'https://github.com/edvale732/website',
+    readmeUrl:
+      'https://raw.githubusercontent.com/edvale732/website/main/README.md',
     image: PortfolioImage,
   },
   {
-    slug: 'film-portfolio-website',
-    featured: true,
+    slug: 'pollyanna-harrison',
+    featured: false,
     projectType: projectType.client,
     title: 'Film Portfolio Website',
     description:
@@ -71,21 +144,7 @@ export const projects = [
     status: 'In Development',
     year: '2026',
     href: 'https://p-harrison-portfolio-web.vercel.app/',
-    image: UnderConstructionImage,
+    image: PollyannaHarrisonImage,
   },
-  {
-    slug: 'nextjs-dashboard-website',
-    featured: false,
-    projectType: projectType.personal,
-    title: 'Next.js Dashboard Website',
-    description:
-      'A full-stack web dashboard built with Next.js and TypeScript, as part of a Next.js course. ',
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
-    status: 'Completed',
-    year: '2026',
-    href: 'https://github.com/edvale732/nextjs-dashboard',
-    image: DashboardWebsiteImage,
-  },
-  
 
 ];
