@@ -3,6 +3,7 @@ import Link from 'next/link';
 import headshot from '@/app/ui/icons/Headshot.jpg';
 import GitHubIcon from '@/app/ui/icons/github-white.png';
 import LinkedInIcon from '@/app/ui/icons/linkedin-white.png';
+import EmailIcon from '@/app/ui/icons/email.png';
 import RevealOnScroll from '@/app/ui/reveal-on-scroll';
 
 export default function Page() {
@@ -22,50 +23,39 @@ export default function Page() {
                 Hi, I am Edward, a First-Class Computer Science graduate from Lancaster University who enjoys turning complex problems into practical software. I have developed my skills through university, <Link href="/projects" className="font-medium text-subtle underline decoration-accent-border/70 underline-offset-4 transition hover:text-accent-hover">personal projects</Link> and <a href="https://www.mytutor.co.uk/tutors/10005073/" className="font-medium text-subtle underline decoration-accent-border/70 underline-offset-4 transition hover:text-accent-hover">online tutoring</a>, and I am now seeking opportunities to apply my knowledge, expand my skills and contribute to a team.
               </p>
 
-              <div className="grid gap-4 rounded-2xl border border-accent-border/20 bg-accent/5 p-4 text-center text-sm text-body/85 sm:grid-cols-3 sm:text-left">
-                <div>
-                  <p className="mb-1 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-subtle/70">
-                    Based in
-                  </p>
-                  <p className="font-medium text-accent-hover">England</p>
-                </div>
-
-                <div>
-                  <p className="mb-1 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-subtle/70">
-                    Email
-                  </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+                <Link
+                  href="/projects"
+                  className="rounded-md border border-surface-border/40 bg-accent/15 px-8 py-4 text-base font-semibold text-foreground transition hover:border-accent-hover/70 hover:bg-accent/25 focus:outline-none focus:ring-2 focus:ring-accent-border focus:ring-offset-2 focus:ring-offset-surface"
+                >
+                  View projects
+                </Link>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://github.com/edvale732"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub"
+                    className="flex h-12 w-12 items-center justify-center rounded-md border border-surface-border/30 bg-accent/5 transition hover:border-accent-hover/60 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent-border"
+                  >
+                    <Image src={GitHubIcon} alt="" width={22} height={22} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/edward-vale-4672b3372"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                    className="flex h-12 w-12 items-center justify-center rounded-md border border-surface-border/30 bg-accent/5 transition hover:border-accent-hover/60 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent-border"
+                  >
+                    <Image src={LinkedInIcon} alt="" width={22} height={22} />
+                  </a>
                   <a
                     href="mailto:hello@edwardvale.co.uk"
-                    className="break-words font-medium text-accent-hover transition hover:text-body"
+                    aria-label="Email"
+                    className="flex h-12 w-12 items-center justify-center rounded-md border border-surface-border/30 bg-accent/5 transition hover:border-accent-hover/60 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent-border"
                   >
-                    hello@edwardvale.co.uk
+                    <Image src={EmailIcon} alt="" width={22} height={22} />
                   </a>
-                </div>
-
-                <div>
-                  <p className="mb-1 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-subtle/70">
-                    Links
-                  </p>
-                  <div className="flex items-center justify-center gap-3 sm:justify-start">
-                    <a
-                      href="https://github.com/edvale732"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="GitHub"
-                      className="flex h-8 w-8 items-center justify-center rounded-md border border-surface-border/20 bg-accent/5 transition hover:border-accent-hover/60 hover:bg-accent/10"
-                    >
-                      <Image src={GitHubIcon} alt="GitHub logo" width={18} height={18} className="h-[18px] w-[18px]" />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/edward-vale-4672b3372"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="LinkedIn"
-                      className="flex h-8 w-8 items-center justify-center rounded-md border border-surface-border/20 bg-accent/5 transition hover:border-accent-hover/60 hover:bg-accent/10"
-                    >
-                      <Image src={LinkedInIcon} alt="LinkedIn logo" width={18} height={18} className="h-[18px] w-[18px]" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </RevealOnScroll>
@@ -85,14 +75,6 @@ export default function Page() {
             </RevealOnScroll>
           </div>
 
-          <RevealOnScroll delay={250} className="mt-2 flex justify-center sm:justify-start">
-            <Link
-              href="/projects"
-              className="rounded-md border border-surface-border/40 bg-accent/15 px-5 py-3 text-sm font-semibold text-foreground transition hover:border-accent-hover/70 hover:bg-accent/25 focus:outline-none focus:ring-2 focus:ring-accent-border focus:ring-offset-2 focus:ring-offset-surface"
-            >
-              View projects
-            </Link>
-          </RevealOnScroll>
         </div>
       </main>
     </div>
