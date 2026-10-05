@@ -15,6 +15,16 @@ function resolveImageSrc(src: string | undefined, readmeUrl: string) {
   return new URL(relativeSrc, readmeUrl).href;
 }
 
+function resolvePdfHref(href: string | undefined, readmeUrl: string) {
+  if (!href || !/\.pdf(?:$|[?#])/i.test(href)) {
+    return href;
+  }
+
+  const relativeHref =
+    href.startsWith('/') && !href.startsWith('//') ? href.slice(1) : href;
+  return new URL(relativeHref, readmeUrl).href;
+}
+
 export default async function ProjectReadme({
   readmeUrl,
 }: ProjectReadmeProps) {
@@ -45,7 +55,7 @@ export default async function ProjectReadme({
           components={{
             a: ({ href, title, children }) => (
               <a
-                href={href}
+                href={resolvePdfHref(href, readmeUrl)}
                 title={title}
                 target="_blank"
                 rel="noreferrer"
