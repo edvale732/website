@@ -43,19 +43,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#0b0713] font-sans text-violet-50">
+    <div className="flex min-h-screen flex-col bg-page font-sans text-foreground">
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <Link
           href="/projects"
-          className="inline-flex items-center gap-2 text-sm font-medium text-violet-200 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-violet-400"
+          className="inline-flex items-center gap-2 text-sm font-medium text-accent-hover transition hover:text-heading focus:outline-none focus:ring-2 focus:ring-accent-border"
         >
           <span aria-hidden="true">←</span>
           All projects
         </Link>
 
-        <article className="mt-6 overflow-hidden rounded-2xl border border-violet-400/30 bg-[#120d1d] shadow-[0_0_0_1px_rgba(139,92,246,0.12)]">
+        <article className="mt-6 overflow-hidden rounded-2xl border border-accent-border/30 bg-surface-raised shadow-panel">
           {project.image ? (
-            <div className="border-b border-violet-400/20 bg-violet-950/30 p-4 sm:p-8">
+            <div className="border-b border-accent-border/20 bg-accent/10 p-4 sm:p-8">
               <Image
                 src={project.image}
                 alt={`${project.title} preview`}
@@ -67,11 +67,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           <div className="p-6 sm:p-10">
             <div className="mb-5 flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center rounded-full border border-violet-400/50 bg-violet-500/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-violet-200">
+              <span className="inline-flex items-center rounded-full border border-accent-border/50 bg-accent/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-accent-hover">
                 {project.status}
               </span>
               <div className="ml-auto flex items-center gap-3">
-                <span className="text-sm font-medium uppercase tracking-[0.14em] text-violet-300/80">
+                <span className="text-sm font-medium uppercase tracking-[0.14em] text-subtle">
                   {project.year}
                 </span>
                 {project.href?.startsWith('https://github.com/') ? (
@@ -80,7 +80,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`View ${project.title} on GitHub`}
-                    className="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-400/5 px-3 py-2 text-sm font-medium text-violet-100 transition hover:border-violet-300/60 hover:bg-violet-400/10 focus:outline-none focus:ring-2 focus:ring-violet-400"
+                    className="inline-flex items-center gap-2 rounded-full border border-accent-border/30 bg-accent/5 px-3 py-2 text-sm font-medium text-body transition hover:border-accent-hover/60 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent-border"
                   >
                     <Image
                       src={GitHubIcon}
@@ -97,24 +97,24 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
             {!project.readmeUrl ? (
               <>
-                <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                <h1 className="text-3xl font-semibold tracking-tight text-heading sm:text-4xl">
                   {project.title}
                 </h1>
 
                 <section className="mt-8">
-                  <h2 className="text-lg font-semibold text-white">Overview</h2>
-                  <p className="mt-3 max-w-3xl text-base leading-7 text-violet-100/80">
+                  <h2 className="text-lg font-semibold text-heading">Overview</h2>
+                  <p className="mt-3 max-w-3xl text-base leading-7 text-body/80">
                     {project.description}
                   </p>
                 </section>
 
                 <section className="mt-8">
-                  <h2 className="text-lg font-semibold text-white">Built with</h2>
+                  <h2 className="text-lg font-semibold text-heading">Built with</h2>
                   <ul className="mt-3 flex flex-wrap gap-2" aria-label="Technologies">
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="rounded-full border border-violet-400/20 bg-violet-400/5 px-3 py-1.5 text-sm font-medium text-violet-100/90"
+                        className="rounded-full border border-accent-border/20 bg-accent/5 px-3 py-1.5 text-sm font-medium text-body"
                       >
                         {tag}
                       </li>
@@ -133,7 +133,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-9 inline-flex items-center gap-2 rounded-full border border-violet-300/50 bg-violet-500/15 px-5 py-3 text-sm font-medium text-violet-100 transition hover:border-violet-200 hover:bg-violet-500/25 focus:outline-none focus:ring-2 focus:ring-violet-400"
+                className="mt-9 inline-flex items-center gap-2 rounded-full border border-accent-border/50 bg-accent/15 px-5 py-3 text-sm font-medium text-heading transition hover:border-accent-hover hover:bg-accent/25 focus:outline-none focus:ring-2 focus:ring-accent-border"
               >
                 Visit project
                 <span aria-hidden="true">↗</span>

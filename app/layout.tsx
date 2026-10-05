@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import headshot from "@/app/ui/icons/Headshot.jpg";
 import "./globals.css";
 import NavBar from "./ui/navbar";
  
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
@@ -40,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-zinc-50">
+      <body className={`${jetBrainsMono.variable} min-h-screen bg-page font-sans`}>
         <NavBar />
         <main>{children}</main>
       </body>

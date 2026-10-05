@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --page-background: #0b0713;
-  --page-foreground: #f5f3ff;
-  --heading: #ffffff;
-  --body-text: #ede9fe;
-  --muted-text: #d8d1ff;
-  --subtle-text: #c4b5fd;
-  --surface: #160f24;
-  --surface-raised: #120d1d;
-  --surface-border: #c4b5fd;
-  --accent: #8b5cf6;
-  --accent-border: #a78bfa;
-  --accent-hover: #ddd6fe;
+  --page-background: #10002b;
+  --page-foreground: #f4eaff;
+  --heading: #fffaff;
+  --body-text: #eadcf6;
+  --muted-text: #c8b6db;
+  --subtle-text: #e0aaff;
+  --surface: #1b0b36;
+  --surface-raised: #241044;
+  --surface-border: #8f70ad;
+  --accent: #e0aaff;
+  --accent-border: #c998ea;
+  --accent-hover: #efd7ff;
 }
 
 @theme inline {
@@ -28,10 +28,10 @@
   --color-accent: var(--accent);
   --color-accent-border: var(--accent-border);
   --color-accent-hover: var(--accent-hover);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --shadow-panel: 0 0 0 1px rgb(139 92 246 / 0.12);
-  --shadow-portrait: 0 12px 30px rgb(76 29 149 / 0.22);
+  --font-sans: var(--font-jetbrains-mono);
+  --font-mono: var(--font-jetbrains-mono);
+  --shadow-panel: 0 0 0 1px rgb(224 170 255 / 0.12);
+  --shadow-portrait: 0 12px 30px rgb(0 0 0 / 0.24);
 }
 
 html {
@@ -40,10 +40,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(139, 92, 246, 0.22), transparent 35%),
+    radial-gradient(circle at top, rgb(224 170 255 / 0.16), transparent 38%),
     var(--page-background);
   color: var(--page-foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -73,6 +72,6 @@ body {
 }
 
 ::selection {
-  background: rgba(196, 181, 253, 0.4);
-  color: var(--heading);
+  background: rgb(224 170 255 / 0.4);
+  color: var(--page-background);
 }

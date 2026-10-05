@@ -33,7 +33,7 @@ export function ProjectCard({
   const cardContent = (
     <>
       {image ? (
-        <div className="mb-5 rounded-2xl border border-violet-400/20 bg-violet-950/40 p-2">
+        <div className="mb-5 rounded-2xl border border-accent-border/20 bg-accent/10 p-2">
           <Image
             src={image}
             alt={`${title} preview`}
@@ -45,25 +45,25 @@ export function ProjectCard({
       ) : null}
 
       <div className="mb-4 flex items-center justify-between gap-3">
-        <span className="inline-flex items-center rounded-full border border-violet-400/50 bg-violet-500/10 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-violet-200">
+        <span className="inline-flex items-center rounded-full border border-accent-border/50 bg-accent/10 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-accent-hover">
           {status}
         </span>
         {year ? (
-          <span className="text-xs font-medium uppercase tracking-[0.16em] text-violet-300/80">
+          <span className="text-xs font-medium uppercase tracking-[0.16em] text-subtle">
             {year}
           </span>
         ) : null}
       </div>
 
-      <h2 className="text-xl font-semibold tracking-tight text-white">{title}</h2>
+      <h2 className="text-xl font-semibold tracking-tight text-heading">{title}</h2>
 
-      <p className="mt-3 flex-1 text-sm leading-6 text-violet-100/80">{description}</p>
+      <p className="mt-3 flex-1 text-sm leading-6 text-body/80">{description}</p>
 
       <div className="mt-5 flex flex-wrap gap-2">
         {tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-violet-400/20 bg-violet-400/5 px-2.5 py-1 text-xs font-medium text-violet-100/90"
+            className="rounded-full border border-accent-border/20 bg-accent/5 px-2.5 py-1 text-xs font-medium text-body"
           >
             {tag}
           </span>
@@ -71,7 +71,7 @@ export function ProjectCard({
       </div>
 
       {href ? (
-        <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-violet-200 transition group-hover:text-violet-50">
+        <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent-hover transition group-hover:text-heading">
           {ctaLabel}
           <span aria-hidden="true">→</span>
         </div>
@@ -83,9 +83,9 @@ export function ProjectCard({
     <Link
       href={`/projects/${slug}`}
       aria-label={`View ${title} project`}
-      className="group block h-full rounded-[28px] focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 focus:ring-offset-[#0b0713]"
+      className="group block h-full rounded-[28px] focus:outline-none focus:ring-2 focus:ring-accent-border focus:ring-offset-2 focus:ring-offset-page"
     >
-      <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-violet-400/30 bg-[#160f24] p-5 shadow-[0_0_0_1px_rgba(139,92,246,0.12)] transition duration-200 hover:-translate-y-1 hover:border-violet-300/60 hover:bg-[#1a122d]">
+      <article className="flex h-full flex-col overflow-hidden rounded-[28px] border border-accent-border/30 bg-surface p-5 shadow-panel transition duration-200 hover:-translate-y-1 hover:border-accent-hover/60 hover:bg-surface-raised">
         {cardContent}
       </article>
     </Link>
