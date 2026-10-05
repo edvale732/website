@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <div className="flex min-h-screen flex-col bg-page font-sans text-foreground">
       <main className="flex w-full flex-1 items-center justify-center px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
-        <div className="flex w-full max-w-7xl flex-col items-stretch rounded-2xl border border-accent-border/30 bg-surface/90 p-5 shadow-panel backdrop-blur-sm sm:p-10 lg:min-h-[640px] lg:p-12">
+        <div className="flex w-full max-w-7xl flex-col items-stretch justify-center rounded-2xl border border-accent-border/30 bg-surface/90 p-5 shadow-panel backdrop-blur-sm sm:p-10 lg:min-h-[640px] lg:p-12">
           <div className="grid w-full gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
             <RevealOnScroll as="section" className="flex flex-col gap-7 text-center sm:text-left">
               <div className="space-y-4">
