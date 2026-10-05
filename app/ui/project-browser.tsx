@@ -43,10 +43,10 @@ export function ProjectBrowser({
             type="button"
             aria-pressed={selectedType === label}
             onClick={() => setSelectedType(label)}
-            className={`rounded-full border px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-violet-400 ${
+            className={`rounded-full border px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-accent-border ${
               selectedType === label
-                ? 'border-violet-300 bg-violet-500/20 text-white'
-                : 'border-violet-400/30 bg-violet-400/5 text-violet-200 hover:border-violet-300/60'
+                ? 'border-accent-border bg-accent/20 text-heading'
+                : 'border-accent-border/30 bg-accent/5 text-accent-hover hover:border-accent-hover/60'
             }`}
           >
             {label}
@@ -54,7 +54,7 @@ export function ProjectBrowser({
         ))}
       </div>
 
-      <p className="mb-8 max-w-3xl text-sm leading-6 text-violet-100/80" aria-live="polite">
+      <p className="mb-8 max-w-3xl text-sm leading-6 text-body/80" aria-live="polite">
         {description}
       </p>
 

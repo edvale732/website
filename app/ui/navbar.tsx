@@ -13,7 +13,7 @@ const socialLinks = [
 
 export default function NavBar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-violet-400/30 bg-black/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-surface-border/70 bg-page/90 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <nav className="flex items-center gap-2" aria-label="Main navigation">
           <NavLinks />
@@ -28,7 +28,7 @@ export default function NavBar() {
               rel="noreferrer"
               aria-label={link.name}
               title={link.name}
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-transparent text-violet-100 transition hover:border-violet-400/60 hover:bg-violet-500/15 hover:text-violet-50 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 focus:ring-offset-black"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-transparent text-body transition hover:border-accent-border/60 hover:bg-accent/15 hover:text-heading focus:outline-none focus:ring-2 focus:ring-accent-border focus:ring-offset-2 focus:ring-offset-page"
             >
               <Image
                 src={link.icon}
