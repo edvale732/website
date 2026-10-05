@@ -13,8 +13,8 @@ export default function Page() {
           <div className="grid w-full gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
             <RevealOnScroll as="section" className="flex flex-col gap-7 text-center sm:text-left">
               <div className="space-y-4">
-                <h1 className="max-w-xl text-4xl font-semibold leading-tight tracking-tight text-heading sm:text-5xl lg:text-6xl">
-                  Edward Vale
+                <h1 className="hero-title max-w-xl text-4xl font-semibold leading-tight tracking-tight text-heading sm:text-5xl lg:text-6xl">
+                  <span className="hero-title__text">Edward Vale</span>
                 </h1>
               </div>
 
