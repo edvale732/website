@@ -39,7 +39,7 @@ export function ProjectCard({
             alt={`${title} preview`}
             width={1200}
             height={680}
-            className="h-60 w-full rounded-xl object-contain transition duration-300 group-hover:scale-[1.02] md:object-cover"
+            className="h-60 w-full rounded-xl object-contain transition duration-300 group-hover:scale-[1.02]"
           />
         </div>
       ) : null}
