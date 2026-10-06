@@ -19,7 +19,7 @@ export default function NavLinks() {
           key={link.name}
           href={link.href}
           className={clsx(
-            'flex items-center justify-center rounded-md border border-transparent px-3 py-2 text-sm font-medium text-body transition hover:border-accent-border/60 hover:bg-accent/15 hover:text-heading focus:outline-none focus:ring-2 focus:ring-accent-border focus:ring-offset-2 focus:ring-offset-page',
+            'flex min-h-10 items-center justify-center rounded-md border border-transparent px-2 py-2 text-sm font-medium text-body transition hover:border-accent-border/60 hover:bg-accent/15 hover:text-heading focus:outline-none focus:ring-2 focus:ring-accent-border focus:ring-offset-2 focus:ring-offset-page sm:px-3 sm:min-h-11',
             {
               'border-accent-border/70 bg-accent/20 text-heading shadow-panel': pathname === link.href,
             }
