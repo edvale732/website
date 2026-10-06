@@ -2,10 +2,22 @@ import { Metadata } from 'next';
 import { projects } from '@/app/projects/project-data';
 import RevealOnScroll from '@/app/ui/reveal-on-scroll';
 import { ProjectBrowser } from '@/app/ui/project-browser';
+import { siteUrl } from '@/app/site-url';
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Personal projects page',
+  description:
+    'Explore software projects by Edward Vale, a First-Class Computer Science graduate. Browse personal, university, and client work.',
+  alternates: {
+    canonical: '/projects',
+  },
+  openGraph: {
+    title: 'Projects | Edward Vale',
+    description:
+      'Explore software projects by Edward Vale, including personal, university, and client work.',
+    url: `${siteUrl}/projects`,
+    type: 'website',
+  },
 };
 
 

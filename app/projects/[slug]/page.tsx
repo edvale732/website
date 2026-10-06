@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { projects } from '@/app/projects/project-data';
 import ProjectReadme from '@/app/ui/project-readme';
 import GitHubIcon from '@/app/ui/icons/github-white.png';
+import { siteUrl } from '@/app/site-url';
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -31,6 +32,15 @@ export async function generateMetadata({
   return {
     title: project.title,
     description: project.description,
+    alternates: {
+      canonical: `/projects/${project.slug}`,
+    },
+    openGraph: {
+      title: `${project.title} | Edward Vale`,
+      description: project.description,
+      url: `${siteUrl}/projects/${project.slug}`,
+      type: 'article',
+    },
   };
 }
 

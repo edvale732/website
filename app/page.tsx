@@ -5,10 +5,52 @@ import GitHubIcon from '@/app/ui/icons/github-white.png';
 import LinkedInIcon from '@/app/ui/icons/linkedin-white.png';
 import EmailIcon from '@/app/ui/icons/email.png';
 import RevealOnScroll from '@/app/ui/reveal-on-scroll';
+import type { Metadata } from 'next';
+import { siteUrl } from './site-url';
+
+export const metadata: Metadata = {
+  title: 'Home | Edward Vale',
+  description:
+    'Meet Edward Vale, a First-Class Computer Science graduate from Lancaster University. Explore software projects and get in touch.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Edward Vale | Computer Science Graduate & Developer',
+    description:
+      'Meet Edward Vale, a First-Class Computer Science graduate from Lancaster University. Explore software projects and get in touch.',
+    url: siteUrl,
+    type: 'profile',
+  },
+};
 
 export default function Page() {
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Edward Vale',
+    url: siteUrl,
+    image: `${siteUrl}${headshot.src}`,
+    description:
+      'First-Class Computer Science graduate from Lancaster University interested in building practical software.',
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Lancaster University',
+    },
+    sameAs: [
+      'https://github.com/edvale732',
+      'https://www.linkedin.com/in/edward-vale-4672b3372',
+    ],
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-page font-sans text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personSchema).replace(/</g, '\\u003c'),
+        }}
+      />
       <main className="flex w-full flex-1 items-center justify-center px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
         <div className="flex w-full max-w-7xl flex-col items-stretch justify-center rounded-2xl border border-accent-border/30 bg-surface/90 p-5 shadow-panel backdrop-blur-sm sm:p-10 lg:min-h-[640px] lg:p-12">
           <div className="grid w-full gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
