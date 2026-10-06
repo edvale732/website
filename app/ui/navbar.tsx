@@ -14,12 +14,12 @@ const socialLinks = [
 export default function NavBar() {
   return (
     <header className="sticky top-0 z-50 border-b border-surface-border/70 bg-page/90 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <nav className="flex items-center gap-2" aria-label="Main navigation">
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-2 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8">
+        <nav className="flex items-center gap-1 sm:gap-2" aria-label="Main navigation">
           <NavLinks />
         </nav>
 
-        <div className="ml-auto flex items-center gap-2" aria-label="Social links">
+        <div className="ml-auto flex items-center gap-1 sm:gap-2" aria-label="Social links">
           {socialLinks.map((link) => (
             <Link
               key={link.name}
@@ -28,7 +28,7 @@ export default function NavBar() {
               rel="noreferrer"
               aria-label={link.name}
               title={link.name}
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-transparent text-body transition hover:border-accent-border/60 hover:bg-accent/15 hover:text-heading focus:outline-none focus:ring-2 focus:ring-accent-border focus:ring-offset-2 focus:ring-offset-page"
+              className="flex h-10 w-10 items-center justify-center rounded-md border border-transparent text-body transition hover:border-accent-border/60 hover:bg-accent/15 hover:text-heading focus:outline-none focus:ring-2 focus:ring-accent-border focus:ring-offset-2 focus:ring-offset-page sm:h-11 sm:w-11"
             >
               <Image
                 src={link.icon}

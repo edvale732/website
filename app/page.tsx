@@ -14,7 +14,7 @@ export default function Page() {
           <div className="grid w-full gap-8 lg:grid-cols-[1.5fr_0.9fr] lg:items-center">
             <RevealOnScroll as="section" className="flex flex-col gap-7 text-center sm:text-left">
               <div className="space-y-4">
-                <h1 className="hero-title max-w-xl text-4xl font-semibold leading-tight tracking-tight text-heading sm:text-5xl lg:text-6xl">
+                <h1 className="hero-title mx-auto max-w-xl text-3xl font-semibold leading-tight tracking-tight text-heading sm:mx-0 sm:text-5xl lg:text-6xl">
                   <span className="hero-title__text">Edward Vale</span>
                 </h1>
               </div>
@@ -60,15 +60,15 @@ export default function Page() {
               </div>
             </RevealOnScroll>
 
-            <RevealOnScroll delay={150} className="relative hidden justify-center lg:flex">
+            <RevealOnScroll delay={150} className="relative flex justify-center">
               <div className="absolute inset-4 -z-10 rounded-[1.5rem] bg-accent/10 blur-2xl" />
-              <div className="w-full max-w-[360px] overflow-hidden rounded-[1.5rem] border border-surface-border/20 bg-surface-raised p-2 shadow-portrait">
+              <div className="w-full max-w-[220px] overflow-hidden rounded-[1.5rem] border border-surface-border/20 bg-surface-raised p-2 shadow-portrait sm:max-w-[280px] lg:max-w-[360px]">
                 <div className="overflow-hidden rounded-[1.1rem]">
                   <Image
                     src={headshot}
                     alt="Edward Vale headshot"
-                    priority
-                    className="h-[420px] w-full object-cover object-center"
+                    sizes="(max-width: 640px) 220px, (max-width: 1024px) 280px, 360px"
+                    className="h-64 w-full object-cover object-center sm:h-80 lg:h-[420px]"
                   />
                 </div>
               </div>
